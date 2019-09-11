@@ -11,7 +11,9 @@ Welcome to HPCS !
 
 [<img src="./banner_requirements.png" width=300 style="border:none;"></img>](requirements.md)
 [<img src="./banner_schedule.png" width=300 style="border:none;"></img>](schedule.md)
-[<img src="./banner_team.png" width=300 style="border:none;"></img>](#チームについて)
+<a href="#チームについて">
+	<img src="./banner_team.png" width=300 style="border:none;"></img>
+</a>
 
 HPCS研究室とは
 --------------
