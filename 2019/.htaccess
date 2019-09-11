@@ -1,0 +1,27 @@
+AuthType Basic
+AuthName "Please enter username and password"
+AuthBasicProvider ldap
+#AuthzLDAPAuthoritative off  
+
+AuthGroupFile /dev/null
+#AuthUserFile /home/www/https/internal/.htpasswd
+AuthLDAPURL ldap://auth.lab.hpcs.cs.tsukuba.ac.jp/o=HPCS,dc=hpcs,dc=cs,dc=tsukuba,dc=ac,dc=jp?uid??(!(description=OB))
+#AuthLDAPURL ldap://serv1.hpcs.cs.tsukuba.ac.jp/o=HPCS,dc=hpcs,dc=cs,dc=tsukuba,dc=ac,dc=jp?uid??(!(description=OB))
+#AuthLDAPURL ldap://serv1.hpcs.cs.tsukuba.ac.jp/o=HPCS,dc=hpcs,dc=cs,dc=tsukuba,dc=ac,dc=jp?uid??(!(gidNumber=9000))
+Require valid-user
+#LDAPTrustedCA /etc/openldap/ca.cert
+
+Satisfy any
+
+order deny,allow
+deny from all
+allow from hpcs.cs.tsukuba.ac.jp
+
+
+#ErrorDocument 503 /mente.html
+
+#<IfModule mod_rewrite.c>
+  #RewriteEngine On
+  #RewriteCond %{REQUEST_URI} !=/mente.html
+  #RewriteRule ^.*$ - [R=503,L]
+#</IfModule>
