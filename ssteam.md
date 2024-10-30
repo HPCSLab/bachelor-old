@@ -1,125 +1,142 @@
-システムソフトウェアチーム
-==================
-<!-- this is a comment. -->
+# システムソフトウェアチーム
 
-------------
+<img src="./PXL_20231002_090544693.jpg"  alt="集合写真（後で全員集まったときにとりなおす）" width=650></img>
 
-2017年9月伊香保温泉における実装合宿
+## 研究トピック
 
-![](./ssteam.jpg "2017年9月，伊香保温泉における実装合宿")
-<!--<img src="./ssteam.jpg" width=600 title="2017年9月伊香保温泉における実装合宿">
-/img>-->
+### 建部 修見 教授
 
-研究トピック
-------------
+#### HPC・ビッグデータ・AIのための並列分散システムソフトウェア
 
-#### [HPC, ビッグデータ, AI](http://www.extreme-bigdata.jp/?page_id=79)の基盤技術
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XvcKs-c9nA8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-[HPC, ビッグデータ, AI](http://www.extreme-bigdata.jp/?page_id=79)とは, 現状の数千〜数百万倍ともいわれる大規模ビッグデータであり, 様々な分野で今後その大きさのビッグデータ解析が必要といわれています. その大きさのデータを処理するためには, HPC, クラウド, グリッド技術をベースに基盤技術の研究開発が必要となります. そこで, 分散ストレージシステム, 並列分散実行時システムなどの研究開発を行っています. 
+HPC, ビッグデータ, AIのための並列分散システムソフトウェアの研究を行います．演算性能はGPU等の演算加速器により高速化が図られますが, ストレージ性能とのギャップが問題となっています．HPC, ビッグデータ, AIではこのギャップの解消が急務となっており、アーキテクチャ, ソフトウェアの両面から問題に取り組みます．HPC用大規模PCクラスタ, <a href="https://www.ccs.tsukuba.ac.jp/supercomputer/#Cygnus">Cygnus</a>等のスパコンを利用して研究を進めていきます．以下のビデオは以前の研究プロジェクトのハイライトです．
 
-#### 分散ファイルシステム
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XvcKs-c9nA8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="max-width: 100%"></iframe>
 
-ビッグデータ処理を行うためのソフトウェア基盤として<a href=http://oss-tsukuba.org/software/gfarm>Gfarmファイルシステム</a>の開発を行っています. 本ソフトウェアは研究開発基盤としてだけではなく, <a href=http://www.hpci-office.jp/pages/hpci_2016_st-1>HPCI共用ストレージ</a>や[Active! world](https://active-world.jp/)など大規模な実運用もされています. Gfarmファイルシステムをベースに新しい機能の拡張や性能評価など研究も進められますし, 新しいファイルシステムの研究開発もできます. 
+2022年から筑波大には不揮発性メモリを大規模に導入したビッグメモリスーパコンピュータPegasus が導入されました。Pegasus の大容量メモリ、また大容量不揮発性メモリを用いて研究を進めていきます。テーマの例としては以下のようなものがありますが、相談して決めていきます
 
-#### [天文ビッグデータ](https://www.jst.go.jp/kisoken/crest/project/44/14532369.html)
+#### テーマの例
 
-[Kavli IPMU](http://www.ipmu.jp/ja), [国立天文台](http://www.nao.ac.jp/)との共同研究により, 宇宙の詳細な仕組みについて解明する研究を行っています. <br>右の図では, すばる望遠鏡から得られたデータが天文パイプラインにより処理され, その結果として美しい画像が得られる様子が示されています. 毎晩の撮像データサイズは数百GBです. <br> 
-世界的な競争に勝つために, この天文パイプラインを高速化する必要があります. そのためには, ログ先行書込み, 分散トランザクション, そして並行実行制御などの技術を深化させる必要があり, それらに取り組んでいます. <br>さらに, 画像から得られる銀河の数は100億以上です. これらのデータはいわゆるDBMSにおいて管理されるため, その高速処理が必要になります. そこでMapReduce処理系, 空間索引, 分散合意技術などのデータシステム技術を深化させています. 
-<img src="kaw-astro.png", width=300></img>
+1. 並列分散ストレージシステム，キャッシングファイルシステム
 
-#### OpenNVMを用いたオブジェクトストレージシステム
-分散ファイルシステムを高性能化するには, メタデータ操作を高性能化する必要があります. このために我々はオブジェクトストレージシステムを新たに研究開発しました. このシステムはOpenNVMと呼ばれる不揮発メモリ向けの新しいAPIを駆使することで, 従来のシステムであるXFSやdirectFSに比べて10倍以上の高性能化を達成しています. 具体的には48bitの仮想アドレス空間, 書込み単位でのアトミックな更新を利用しています. [[詳細はこちら]](https://www.jstage.jst.go.jp/article/ipsjjip/24/5/24_824/_pdf)
-<img src="taka2.jpg", width=300></img>
+1. 並列I/O, Python などのクライアントライブラリ
 
-<!--ここに研究トピックについて記述します．-->
+1. 深層学習システム、並列アプリケーションの性能評価、高性能化
 
-<!-- 所属教員・研究員 -->
+## 研究室説明会日程
+最終更新日: 2023-09-16
 
-研究室説明会日程
---------
-##全体説明会
-10 / 3 (水), 16:45 - 18:00
-(注意) 全体説明会において，SS チームの紹介は行われません．
-##研究室公開
-10 / 3 (水), 18:15 - 19:00
-10 / 12 (金), 18:15 - 19:00
-10 / 22 (月), 18:15 - 19:00
-メンバー
---------
+
+### 研究室公開
+|日付|時間|場所|
+|:---|:---|:---|
+|2023/10/4  (水)|15:15 ~ 17:00|総合研究棟B 1222|
+|2023/10/9 (月)|13:45 ~ 15:00|3A405（分散システム後）|
+|2023/10/20 (金)|18:15 ~ 19:30|総合研究棟B 1222|
+<!--
+ 今年は物理開催とオンラインの両方で研究室説明会を行います.   
+オンライン開催のリンクについては[説明会スケジュール](https://www.hpcs.cs.tsukuba.ac.jp/bachelor/#!schedule.md)ページのリンク先のGoogle Formからリモート参加の受付を行ってください.
+-->
+
+## メンバー
 
 <!-- |教員名|職階|研究分野に関するキーワード| -->
 
-|名前|職階|研究内容・メッセージ| 
+| <span style="display: inline-block; width: 6em;">名前</span> | <span style="display: inline-block; width: 6em;">職階</span> | 研究内容・メッセージ |
 |:-----|:---|:-------------------------|
-|[建部 修見](http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/)|教授|<font color="green">分散ファイルシステム, 並列システムソフトウェア</font><br>システムソフトウェアに興味がある人, 大きいことをやってみたい人は是非どうぞ. 好きなことをやってください. |
-|川島 英之|慶應義塾大学 准教授|<font color="green">データベースシステム</font><br>私は3月までHPCSシステムソフトウェアチームに所属していました．4月から慶應義塾大学に移動しましたが，現在でも共同研究をしています．このチームには，世界と戦える実力があります．私の専門分野であるデータカーネル技術においても，日本でこのチームにしかない先端的技術が多数あります．研究費は潤沢であり，設備は万全であり，建部先生は立派な方です．研究内容は，やって面白く，現実に役立ち，しかも良い就職に直結，と三拍子揃っています．興味を持ったら，ぜひ話を聞きにきてください．|
-|田中 昌宏|研究員|<font color="green">並列分散ワークフローシステムPwrake</font><br>Rakeをベースにして設計され, 分散ファイルシステムGfarmと高い親和性をもつワークフローシステムPwrakeを研究開発しています. [RubyKaigiでの講演はこちら](http://rubykaigi.org/2016/presentations/masa16tanaka.html)|
-|平賀 弘平|D3|-|
-|岩井 厚樹|M2|<font color="green">サイエンスアプリケーションを用いたIO性能測定</font><br>SystemSoftwareチームは100台を超える計算機を所有しています. それらを使ってプログラムを実行することはもちろん, 計算機の保守・管理も経験することができます. 私たちと一緒にこの恵まれた環境で研究してみませんか？|
-|小林 淳司|M2|<font color="green">分散ファイルシステム</font><br>HPCS研究室には研究を行うための環境がそろっていて, 新しい技術に触れられる機会も多いです. ビッグデータやその基盤となる技術を研究してみたいという方にはとてもいい研究室だと思います. |
-|中村 泰大|M2|<font color="green">並行実行制御手法<a href="http://people.csail.mit.edu/sanchez/papers/2016.tictoc.sigmod.pdf">TicToc</a>の改善</font><br>先生・先輩からのサポートも手厚く, 個々人の興味に合わせて研究内容を, 一緒になって真剣に考えていけます. いわゆるビッグデータの花形となる分野ではなく, その基盤となる分野を取り扱っています. エンジニアやビッグデータを支えるものづくり/研究に興味がある方にぴったりかと思います. |
-|渡辺 敬之|M2|<font color="green">並行実行索引木<a href="https://pdos.csail.mit.edu/papers/masstree:eurosys12.pdf">MassTree</a>の改善</font><br>たくさんの計算機を所有しており, それらを使って個人ではできないレベルの高い研究をすることができます. わからないことを先輩や先生に尋ねると, とても親切に教えてもらえ最新の技術を学ぶことができます. また, 頻繁に先生と打ち合わせをする機会があるので, どう進めればよいかわからなくなることもありません. |
-|梶原 顕伍|M2|<font color="green">分散合意手法<a href="https://www.usenix.org/system/files/conference/atc14/atc14-paper-ongaro.pdf">RAFT</a>の改善</font><br>この研究室では優秀な先生方, 先輩方にサポートしてもらいながらビッグデータの基盤技術を学べます. この分野を学ぶにあたって, コンピュータ・アーキテクチャとプログラミングの両方の理解が不可欠なので両方とも学びたいというよくばりな人に向いていると思います. 個人的にテニスをやっているのでテニスに興味のある人もぜひ. |
-|河合 祐輔|M1|<font color="green">極端気象現象に関するアプリケーションの並列化と評価補助</font><br>多くの計算機があり, 非常に恵まれた環境で好きなことを研究することができます. ビッグデータ処理などに興味がある方は是非.|
-|北澤 昂大|M1|<font color="green">分散ファイルシステムGfarmとクラウドストレージの統合システムソフトウェア</font><br>最新の技術を学ぶ機会を与えてくれる良い研究室だと思います. 最近流行りのビッグデータ処理(機械学習, AI,クラウド)などの基盤となるシステムを身近に感じながら学ぶことが出来ます. また先生が優しそうだったのが入った動機の1つでしたが本当に良い先生だった研究室です. ただ先生はご多忙な方なので、研究を進めるにあたって多少の主体性(受け身だけでなくて自分で聞いたり調べるなど)は必要だと感じていますが毎週進捗報告があるので相談する機会は用意されていると思います. |
-|町田 健太|M1|<font color="green">Pwrake/Gfarmによる並列分散相同性検索システムの提案</font><br>この研究室は、広々としたスペース・4Kディスプレイ・高級椅子/ソファを備え、かつ飲食物もたくさん蓄えておりもはや住めるんじゃないかって思います。先生は人当たりがよい方で研究室はいつも穏やかな空気が流れてるので、伸び伸びと研究に励むことができます。コアタイムは特に無いですが、毎週進捗報告会があるので適度に厳しさがあります。全然ブラック研究室じゃないです！|
-|芹沢 和洋|M1|<font color="green">深層学習の高速化手法の研究</font><br>私は学部卒業後に9年間の社会人経験を経てCSを勉強し直すために入学したおっさんですが, 先生方や周りの学生の皆さんには分け隔てなく接していただき何不自由なく研究に没頭できています.  メニーコアマシンだけでなくV100/P100といったGPUを使った実験ができます. GPGPU/深層学習に興味がある人にもおすすめの研究室です.|
-|佐藤 拓人|M1|<font color="green">気象学大規模データの解析</font><br>気象分野とのデュアルディグリープログラムです。気象学LESモデルの高性能化や, 気象学で作られる大規模データの解析に取り組んでいます。他分野とのコラボレーションもあり非常に活き活きとした環境です。|
-|澤田 一樹|M1|<font color="green">分散ファイルシステムにおけるノードローカルバーストバッファの活用</font><br>NVMeが大好きです。広い研究室と充実した備品で快適に研究ができます。MTがこまめにあるので意思疎通もしやすいです。|
-|田辺 敬之|M1|<font color="green">高性能トランザクション処理, 並行性制御，ログ永続化</font><br>とても充実した環境で自己研鑽に励むことができる研究室だと思います．B4 で Hello World から始めても，一年後には世界が視界に入ってくる，そういう環境です．共に世界に挑みましょう．|
-|田村 駿弥|M1|<font color="green">並行木構造</font><br>木構造の専門家です。好きな木構造は MassTree です．並列プログラミングに自信があります．並列プログラミング・並行木構造・C言語等に関心がある，自信がある人は熱く議論しましょう！！|
-|堀江 悠樹|M1|ブロックチェーンに新たな旋風を巻き起こします。|
-|杉原 航平|B4|<font color="green">ノードローカルストレージを活用したアプリケーションレベルバーストバッファの検討</font><br>SS チームでは高速インターコネクトである InfiniBand や高速ストレージの NVMe SSD を搭載したノードを含む，合計 100 台規模の計算機を独自に所有していて，個人で構築するには難しいような高性能でかつ大規模な計算環境のもと実験を行うことができます．研究室の環境も良く，潤沢な計算資源と素晴らしい環境が揃った居心地の良い研究室です．|
-|[高橋 宗史](https://hpcs.cs.tsukuba.ac.jp/~shuuji3)|B4|<font color="green">分散オブジェクトストレージ Ceph の性能改善</font><br>この研究室では、充実した環境で研究に取り組むことができます。実験では、研究室所有の高性能なコンピュータクラスタ(SSチームだけで約100ノード！)が自由に利用できます。|
-|横田 健太|B4|TOEIC900点超えは当たり前|
-|畑中 智之|B3|充実した環境で研究に取り組むことができます．潤沢な計算機資源を使って研究をしてみたい方はぜひ．|
+|[建部 修見](http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/index-j.html)|教授|<span style="color: green;">分散ファイルシステム, 並列システムソフトウェア</span><br>システムソフトウェアに興味がある人, 大きいことをやってみたい人は是非どうぞ. 好きなことをやってください. |
+| 平賀 弘平 | 研究員 | 分散メタデータサーバ、MPI-IO分散システムやシステムソフトウェアに興味のある方はぜひ一緒に研究しましょう。不揮発性メモリを使ってみたい方もどうぞ！ |
+| 前田 宗則 | 主任研究員 | 産学連携プロジェクトで富士通株式会社から来ました研究員です. 高速な分散データストアの重要性は増しています. この研究室で一緒にやりましょう.|
+| 中谷 裕一 | D2 |負荷が均等となるコンシステントハッシングの研究をしています|
+| 杉原 航平 | D1 |<span style="color: green;">ノードローカルバーストバッファの検討</span><br>研究室の人数よりも計算機の方が多い研究室です。クラスタやスーパーコンピューターを使って研究してみたい人はぜひ！ |
+| 兪明哲 | D1 | 分散学習の耐障害性についての研究を考えています |
+| 木下 嵩裕 | M2 | <font color="green"> ハードウェアの特性を汲んだ不揮発メモリの効率的な使い方</font><br> 潤沢な計算資源，環境があります．ぜひ一緒に研究しましょう．  |
+| 小山 創平 | M2 | アドホックファイルシステムを開発しています。一緒にIO500上位を目指しましょう |
+| 丸山 泰史 | M1 | 研究テーマを選ぶ自由を与えてくれる研究室です。やりたいことをやりましょう。|
+| 中野 将生 | B4 |<span style="color: green;"> Rustの非同期機構のHPC上での評価と応用</span><br/> HPCに限らず色々な分散システムの話をしましょう |
 
-研究論文
-----------------------
 
-### 論文誌 ###
-### 国際発表 ###
 
-1. Integration of Parallel Write Ahead Logging and Cicada Concurrency Control Method
-    - Takayuki Tanabe, Hideyuki Kawashima, Osamu Tatebe
-    - 2nd IEEE International Workshop on Big Data and IoT Security in Smart Computing (BITS2018)
 
-1. Applying Pwrake Workflow System and Gfarm File System to Telescope Data Processing
-    - Masahiro Tanaka, Osamu Tatebe, Hideyuki Kawashima
-    - 2018 IEEE International Conference on Cluster Computing (CLUSTER), pp. 113-122, Sep. 2018.
+## 研究論文
 
-1. PPMDS: A Distributed Metadata Server based on Nonblocking Transactions
-    - Kohei Hiraga, Osamu Tatebe, Hideyuki Kawashima
-    - Proceedings of the Second International Workshop on Data Science Engineering and its Applications, 2018
+最新の論文は[建部先生の個人ページ](http://www.hpcs.cs.tsukuba.ac.jp/~tatebe/research/publication-j.html)をご参照ください。
 
-1. Integrating TicToc with Parallel Logging
-    - Yasuhiro Nakamura, Hideyuki Kawashima, Osamu Tatebe
-    - The Sixth International Symposium on Computing and Networking (CANDAR 2018)
+### 国際発表
 
-### 国内発表 ###
+1. Fast checkpointing of Large Language Models with TensorStore CHFS
+    - Sohei Koyama, Kohei Hiraga, Osamu Tatebe, 
+    -  SC23 Graduate Posters ACM Student Research Competition, 2023 (to appear)
 
+1. I/O-Aware Flushing for HPC Caching Filesystem
+    - Osamu Tatebe, Kohei Hiraga, Hiroki Ohtsuji,
+    -  Proceedings of 3rd Workshop on Re-envisioning Extreme-Scale I/O for Emerging Hybrid HPC Workloads (REX-IO), 2023 (to appear)
+
+1. Accelerating I/O in Distributed Data Processing Systems with Apache Arrow CHFS
+    - Sohei Koyama, Kohei Hiraga, Osamu Tatebe,
+    -  Proceedings of 3rd Workshop on Re-envisioning Extreme-Scale I/O for Emerging Hybrid HPC Workloads (REX-IO), short paper, 2023 (to appear)
+
+1. [Cygnus - World First Multihybrid Accelerated Cluster with GPU and FPGA Coupling](https://dl.acm.org/doi/10.1145/3547276.3548629)
+    - Taisuke Boku, Norihisa Fujita, Ryohei Kobayashi, Osamu Tatebe,
+    - Proceedings of 2nd International Workshop on Deployment and Use of Accelerators (DUAC), Article No.8, pp.1-8, 10.1145/3547276.3548629, 2022
+
+1. [Scalable Data Parallel Distributed Training for Graph Neural Networks](https://ieeexplore.ieee.org/document/9835176)
+    - Sohei Koyama, Osamu Tatebe,
+    - Proceedings of Workshop on AI for Datacenter Optimization (ADOPT'22), pp.699-707, 10.1109/IPDPSW55747.2022.00121, 2022
+
+1. [Caching Support for CHFS Node-local Persistent Memory File System](https://ieeexplore.ieee.org/document/9835238)
+    - Osamu Tatebe, Hiroki Ohtsuji,
+    - Proceedings of 3rd Workshop on Extreme-Scale Storage and Analysis (ESSA 2022), pp.1103-1110, 10.1109/IPDPSW55747.2022.00182, 2022
+
+1. [CHFS: Parallel Consistent Hashing File System for Node-local Persistent Memory](https://dl.acm.org/doi/10.1145/3492805.3492807)
+    - Osamu Tatebe, Kazuki Obata, Kohei Hiraga, Hiroki Ohtsuji,
+    - Proceedings of the ACM International Conference on High Performance Computing in Asia-Pacific Region (HPC Asia 2022), pp.115-124, 10.1145/3492805.3492807, 2022
+
+### 国内発表
 情報処理学会HPC研究会とOS研究会に投稿した研究会原稿に関して，筑波大学は情報処理学会と機関契約をしていますので，これらの原稿は筑波大学構内のネットワークからは自由にダウンロード可能です．
 
-1. 並行性制御法 Cicada の評価
-    - 田辺敬之, 川島英之, 建部修見
-    - 第10回データ工学と情報マネジメントに関するフォーラム, 第16回日本データベース学年次大会 (DEIM2018)
+1. [Pegasusビッグメモリスーパコンピュータの性能評価](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=227118&item_no=1&page_id=13&block_id=8)
+    - 建部 修見 , 平賀 弘平 , 前田 宗則 , 藤田 典久 , 小林 諒平 , 額田 彰
+    - 情報処理学会 第190回 HPC 研究会報告
 
-1. 並行性制御法 Cicada と並列ログ先行書き込み法 P-WAL の結合
-    - 田辺敬之, 川島英之, 建部修見
-    - xSIG2018, cross-disciplinary workshop on computing Systems, Infrastructures, and programming
+1. [Apache Arrow CHFSによるビッグデータ処理のI/O高速化](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=227116&item_no=1&page_id=13&block_id=8)
+    - 小山 創平 , 平賀 弘平 , 建部 修見
+    - 情報処理学会 第190回 HPC 研究会報告
 
-1. サイエンティフィックビッグデータアプリケーションのためのベンチマークセットの提案
-    - 岩井厚樹, 建部修見
-    - SWoPP2018
+1. [分散キャッシュファイルシステムの設計と実装](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=220228&item_no=1&page_id=13&block_id=8)
+    - 笠井 大暉 , 建部 修見
+    - 情報処理学会 第186回 HPC 研究会報告
 
-2017年以前は<a href="https://www.hpcs.cs.tsukuba.ac.jp/publications/">こちら</a>より参照できます. 
+1. [MPI-IO/CHFS:ノードローカル不揮発性メモリを活用するアドホック分散ファイルシステムのためのMPI-IOの設計](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=218971&item_no=1&page_id=13&block_id=8)
+    - 平賀 弘平 , 建部 修見
+    - 情報処理学会 第185回 HPC 研究会報告
+
+1. [CHFSアドホック並列分散ファイルシステムのアクセス性能の評価](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=218969&item_no=1&page_id=13&block_id=8)
+    - 建部 修見
+    - 情報処理学会 第185回 HPC 研究会報告
+
+1. [HPC環境を想定した探索的データ解析におけるノードローカルストレージの利用の検討](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=218957&item_no=1&page_id=13&block_id=8)
+    - 巨畠 和樹 , 小山 創平 , 平賀 弘平 , 建部 修見
+    - 情報処理学会 第185回 HPC 研究会報告
+
+1. [不揮発性メモリを用いた分散オブジェクトストレージの設計](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=217758&item_no=1&page_id=13&block_id=8)
+    - 巨畠 和樹 , 建部 修見
+    - 情報処理学会 第184回 HPC 研究会報告
+
+1. [計算ノード上の不揮発性メモリを用いたMPI-IOバーストバッファの設計](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=217502&item_no=1&page_id=13&block_id=8)
+    - 平賀 弘平 , 建部 修見
+    - 情報処理学会 第183回 HPC 研究会報告
+
+1. [計算ノードの不揮発性メモリを用いたキャッシュファイルシステムの設計](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=217486&item_no=1&page_id=13&block_id=8)
+    - 建部 修見
+    - 情報処理学会 第183回 HPC 研究会報告
 
 
-日常生活
-----------------------
-1. 週に一回，2-3時間のチームミーティングをします. ここでは簡単に進捗報告をします. また，週に一回全体ミーティングも行います．これはHPCS研究室の全チームが集まって行うミーティングです．
-1. 上記以外に個別ミーティングを週に1回程度やります. ここでは一緒に論文を読んだり, 研究の方向性を考えたりします. 
-1. コアタイムはありませんが, 午前中にきて夕方に帰る人が多いようです. ラボくるとなんか楽しくていいですね. 
+2022年以前は[こちら](https://www.hpcs.cs.tsukuba.ac.jp/publications/)より参照できます. 
+
+
+## 日常生活
+
+1. コロナウイルスが収束しつつあるため、ミーティングが対面になりました. チームミーティングは週に一回, 全体ミーティングは月に一回程です. 
+1. コアタイムはありません 
 1. 研究室内には, 電子レンジ, 冷蔵庫, 電気ポット, コーヒーメーカー, ソファ等の備品もあり, 所属している学生は自由に使用することができます. また，物販もあり，軽食・飲み物等が購入可能です．
-1. 楽しいイベントが多数あります. 
-1. 開発合宿を毎年やります. 
+1. 楽しいイベントがいくつかあります

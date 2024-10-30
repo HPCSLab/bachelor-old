@@ -1,0 +1,8 @@
+RedirectMatch 404 /\.git
+RedirectMatch 404 /README.md
+
+<Files ~ "\.md$">
+  FileEtag None
+  RequestHeader unset If-Modified-Since
+  Header set Cache-Control no-store
+</Files>
